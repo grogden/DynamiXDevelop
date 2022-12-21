@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Header</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#load_data').click(function(){
+            $.ajax({
+                url:"data.csv",
+                dataType:"text",
+                success:function(data)
+                {
+                    var employee_data = data.split(/\r?\n|\r/);
+                    var table_data = '<table class="table table-bordered table-striped">';
+    
+                    for(var count = 0; count<employee_data.length; count++)
+                    {
+                        var cell_data = employee_data[count].split(",");
+                        table_data += '<tr>';
+                        for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+                        {
+                            if(count === 0)
+                            {
+                                table_data += '<th>'+cell_data[cell_count]+'</th>';
+                            }
+                            else
+                            {
+                                table_data += '<td>'+cell_data[cell_count]+'</td>';
+                            }
+                        }
+                        table_data += '</tr>';
+                    }
+    
+                    table_data += '</table>';
+                    $('#employee_table').html(table_data);
+                }
+            });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1><a href="../Pages/Home.html"><span>DynamiX Develop</span><a>  |</h1>
+            </div>
+
+            <ul class="navigation">
+                <a href="../Pages/Home.html"><li>D365</li></a>
+                <a><li>Certifications</li></a>
+                <a href="../Pages/Contact.html"><li>Contact</li></a>
+                <a href="../Pages/About.html"><li>About</li></a>
+            </ul>
+            <div class="search-container">
+                <form class="search-form" id="form"><!-- action="/action_page.php">-->
+                    <input type="text" id="user-input" placeholder="Search for X++ code" name="search">
+                    <button type="submit" name="search" id="search"><span class="material-symbols-outlined">search</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+
+    <div id="employee_table">
+
+    </div>
+
+</body>
+</html>

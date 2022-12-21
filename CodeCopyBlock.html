@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cody Copy</title>
+    <link rel="stylesheet" type="text/css" href="Templates/theme.css">
+    <link rel="stylesheet" type="text/css" href="CodeCopyBlock.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script 
+        src="https://code.jquery.com/jquery-3.6.2.min.js" 
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" 
+        crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $('#header').load("Templates/header.html");
+        });
+    </script>
+</head>
+
+<body>
+<div id="header"></div>
+
+<div class="CodeContainer">
+    <div class="CopyCode">
+        <span class="language">X++</span>
+        <button type="button" class="copyCodeBtn" onclick="copyCode()"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+    </div>
+    <pre class="codeblock">
+        <code id="code">
+        [DataContractAttribute]
+        class TestContractClass
+        {
+            str testParameter;
+            
+            [DataMemberAttribute('Test Parameter')]
+            public str parmTestParameter(str _testParameter = testParameter)
+            {
+                testParameter = _testParameter;
+            
+                return testParameter;
+            }
+        }
+        </code></pre>
+</div>
+
+<script>
+function copyCode() {
+  // Get the text to be copied
+  var text = document.getElementById("code").innerText;
+
+  // Create a temporary element to hold the text
+  var tempInput = document.createElement("input");
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+
+  // Select the text
+  tempInput.select();
+  document.execCommand("copy");
+
+  // Remove the temporary element
+  document.body.removeChild(tempInput);
+}
+</script>
+</body>
+</html>

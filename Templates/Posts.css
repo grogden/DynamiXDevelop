@@ -1,0 +1,96 @@
+h1{
+    text-align: left;
+}
+h2{
+    text-align: left;
+}
+
+main{
+    margin: auto;
+    width: 70%;
+}
+
+.CodeContainer {
+    margin: auto;
+    width: 100%;
+    background-color: #8ed1fc;
+}
+
+.CodeContainer .CopyCode{
+    background-color: #8ed1fc;
+    border: 1px solid #8ed1fc;
+    font-size: 0.8rem;
+    display: flex;
+    min-height: 30px;
+    width: 100%;
+}
+
+.CodeContainer .language{
+    padding: 10px 16px;
+    width: 100%;
+    color: black;
+    background-color: #8ed1fc;
+}
+
+.CodeContainer button{
+    background-color: #8ed1fc;
+    border: 1px solid #8ed1fc;
+    color: black;
+    width: 90px;
+    cursor: pointer;
+    float: right;
+    padding: 5px 5px;
+}
+
+.CodeContainer button:hover{
+    border: 1px solid #8ed1fc;
+    background-color: #191919;
+    color: #8ed1fc;
+}
+
+.CodeContainer button:active {
+    background-color: #3e8e41;
+    transition: all 0s;
+    /*box-shadow: 0 5px #666;
+    transform: translateY(4px);*/
+  }
+  /*
+.CodeContainer button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+ .CodeContainer button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }*/
+
+.CodeContainer .material-symbols-outlined{
+    vertical-align: middle;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
+}
+
+.CodeContainer pre{
+    color: #8ed1fc;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #1a1a1a;
+    background-color: #191919;
+    tab-size: 4;
+    font-family: Consolas,"courier new";
+    font-size: 10;
+}

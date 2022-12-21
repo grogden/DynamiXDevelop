@@ -1,0 +1,101 @@
+/*
+Global colors
+Blue - #8ed1fc
+*/
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+}
+
+.inner_header{
+    width: 95%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1{
+    color: #8ed1fc;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo_container h1 span{
+    font-weight: 800;
+}
+.logo_container span:hover{
+    text-decoration: underline;
+    text-decoration-color: #8ed1fc;
+}
+
+.navigation{
+    float: left;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 10px;
+}
+.navigation a:hover{
+    text-decoration: underline;
+    text-decoration-color: #8ed1fc;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #8ed1fc;
+    font-size: 17px;
+}
+
+.search-container{
+    float: right;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #8ed1fc;
+    background-color: black;
+    color: #8ed1fc;
+    height: 19px;
+  }
+  
+.search-container button {
+    float: right;
+    padding: 6px;
+    background: #8ed1fc;
+    border: 1px solid #8ed1fc;
+    cursor: pointer;
+  }
+  
+.search-container button:hover {
+    background: black;
+    border: 1px solid #8ed1fc;
+    color: #8ed1fc;
+  }
+
+  .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 24
+}
