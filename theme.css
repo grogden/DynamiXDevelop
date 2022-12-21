@@ -1,0 +1,22 @@
+/*
+Global colors
+Blue  - #8ed1fc
+Black - #000000
+*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+.headerEmbed{
+    width: 100%;
+    height: 80px;
+}
+
+body{
+    background-color: black;
+    color: #8ed1fc;
+}
