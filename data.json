@@ -1,0 +1,98 @@
+[
+    {
+        "category":"code",
+        "subcategory":"forms",
+        "title":"lookup method",
+        "file_path":"Posts/LookupMethod.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"other",
+        "title":"SysOperation Framework",
+        "file_path":"Posts/SysOperationFramework.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"forms",
+        "title":"Display method",
+        "file_path":"Posts/DisplayMethod.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"forms",
+        "title":"Gerating URL in D365",
+        "file_path":"Posts/GeneratingURL.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"forms",
+        "title":"D365 addresses on forms",
+        "file_path":"Posts/D365FormAddresses.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"Legal entity name on report header",
+        "file_path":"Posts/Reports_LEName.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"Deploy reports",
+        "file_path":"Posts/Reports_deployreports.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"New report with TmpTable",
+        "file_path":"Posts/Reports_NewReportWithTmpTable.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"New report with Query",
+        "file_path":"Posts/Reports_NewReportWithQuery.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"Lookup for report dialog",
+        "file_path":"Posts/Reports_DialogLookup.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"Fix parameter issue",
+        "file_path":"Posts/Reports_ParameterIssueFix.html"
+    },
+    {
+        "category":"code",
+        "subcategory":"reports",
+        "title":"Add barcode to report",
+        "file_path":"Posts/Reports_Barcodes.html"
+    },
+    {
+        "category":"Certification",
+        "subcategory":"Developer",
+        "title":"MB-500",
+        "file_path":"Certifications/MB-500.html"
+    },
+    {
+        "category":"Certification",
+        "subcategory":"Functional",
+        "title":"MB-300",
+        "file_path":"Certifications/MB-300.html"
+    },
+    {
+        "category":"Certification",
+        "subcategory":"Functional",
+        "title":"MB-700",
+        "file_path":"Certifications/MB-700.html"
+    },
+    {
+        "category":"Tool",
+        "subcategory":"",
+        "title":"D365 Data Contract generator",
+        "file_path":"Tools/D365ContractGenerator.html"
+    }
+]

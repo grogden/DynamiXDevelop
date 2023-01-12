@@ -15,15 +15,6 @@ body{
     background-color: black;
     color: #8ed1fc;
 }
-/*
-main{
-    margin: auto;
-    width: 95%;
-}*/
-
-.text-primary{
-    color: #8ed1fc;
-}
 
 .header{
     width: 95%;
@@ -32,10 +23,6 @@ main{
     background-color: black;
     margin: 0 auto;
     color: #8ed1fc;
-}
-
-.header a{
-    text-decoration: none;
 }
 
 .header a:hover{
@@ -57,7 +44,7 @@ main{
     height: 100%;
     display: table-cell;
     vertical-align: bottom;
-    padding-bottom: 15px;
+    padding: 15px;
     font-weight: 800;
 }
 
@@ -83,19 +70,17 @@ main{
 }
 
 .header .search-container input[type=text] {
-    padding: 5px;
+    padding: 10px;
     font-size: 17px;
     border: 1px solid #8ed1fc;
     background-color: black;
     color: #8ed1fc;
-    height: 40px;
+    height: 19px;
 }
 
 .header .search-container button {
     float: right;
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding: 6px;
     background: #8ed1fc;
     border: 1px solid #8ed1fc;
     cursor: pointer;

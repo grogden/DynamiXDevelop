@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lookup method</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../Templates/Posts.css">
+    <link rel="stylesheet" type="text/css" href="../Templates/theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="Posts.js"></script>
+</head>
+
+<body>
+<div class="p-5 text-center">
+    <h1>Lookup method</h1>
+</div>
+
+<div class="container">
+    <div id="FormDataSourceDisplayMethod" class="card">
+        <div class="card-header" data-bs-toggle="collapse" href="#collapseOne">
+            <a class="text-primary btn container-fluid">Form Data Source display method</a>
+        </div>
+        <div id="collapseOne" class="collapse show bg-black" data-bs-parent="#accordion">
+            <div class="card-body">
+                <p>Form data source display method additional information</p>
+                <div class="CodeContainer">
+                    <div class="CopyCode">
+                        <span class="language">X++</span>
+                        <button type="button" id="copyCodeBtn" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+                    </div>
+                    <pre class="codeblock">
+                        <code id="code1">
+    display NumberOfRecords testMethod(CustTable myTable)
+    {
+        NumberOfRecords recCount = this.totalNumberOfRows();
+        Return recCount;
+    }
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="TableDisplayMethod" class="card">
+        <div class="card-header" data-bs-toggle="collapse" href="#collapseTwo">
+            <a class="text-primary btn container-fluid" >Table display method</a>
+        </div>
+        <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+                <p>Table display method additional information</p>
+                <div class="CodeContainer">
+                    <div class="CopyCode">
+                        <span class="language">X++</span>
+                        <button type="button" onclick="copyCode('#code2')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+                    </div>
+                    <pre class="codeblock">
+                        <code id="code2">
+    display LogisticsAddressing deliveryAddressing()
+    {
+        return this.deliveryAddress().Address;
+    }
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

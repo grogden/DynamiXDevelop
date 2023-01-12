@@ -10,10 +10,6 @@ Blue - #8ed1fc
     background-color: black;
 }
 
-.header a:visited{
-    color: #8ed1fc;
-}
-
 .inner_header{
     width: 95%;
     height: 100%;
