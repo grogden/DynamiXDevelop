@@ -21,46 +21,28 @@
     <div class="CodeContainer">
         <div class="CopyCode">
             <span class="language">X++</span>
-            <button type="button" onclick="copyCode()"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+            <button type="button" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
         </div>
         <pre class="codeblock">
-            <code id="code">
-            public void lookup(FormControl _formControl, str _filterStr)
-            {
-                Query query = new Query(); 
-                QueryBuildDataSource queryBuildDataSource; 
-                SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
-                
-                sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
-                sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
-                
-                queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
-                queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
-                
-                sysTableLookup.parmQuery(query); 
-                sysTableLookup.performFormLookup();
-            }
+            <code id="code1">
+    public void lookup(FormControl _formControl, str _filterStr)
+    {
+        Query query = new Query(); 
+        QueryBuildDataSource queryBuildDataSource; 
+        SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
+        
+        sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
+        sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
+        
+        queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
+        queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
+        
+        sysTableLookup.parmQuery(query); 
+        sysTableLookup.performFormLookup();
+    }
             </code></pre>
     </div>
 </div>
 
 </body>
-<script>
-    function copyCode() {
-      // Get the text to be copied
-      var text = document.getElementById("code").innerText;
-    
-      // Create a temporary element to hold the text
-      var tempInput = document.createElement("input");
-      tempInput.value = text;
-      document.body.appendChild(tempInput);
-    
-      // Select the text
-      tempInput.select();
-      document.execCommand("copy");
-    
-      // Remove the temporary element
-      document.body.removeChild(tempInput);
-    }
-    </script>
 </html>

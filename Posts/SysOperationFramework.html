@@ -26,19 +26,19 @@
             </div>
             <pre class="codeblock">
                 <code id="code">
-                [DataContractAttribute] 
-                class *contractClassName*
-                {
-                    str testParameter
-                    
-                    [DataMemberAttribute('Test Parameter')]
-                    public str parmTestParameter(str _testParameter = testParameter)
-                    {
-                        testParameter = _testParameter;
-                        
-                        return testParameter;
-                    }
-                }
+    [DataContractAttribute] 
+    class *contractClassName*
+    {
+        str testParameter
+        
+        [DataMemberAttribute('Test Parameter')]
+        public str parmTestParameter(str _testParameter = testParameter)
+        {
+            testParameter = _testParameter;
+            
+            return testParameter;
+        }
+    }
                 </code></pre>
         </div>
     </div>
@@ -53,13 +53,13 @@
             </div>
             <pre class="codeblock">
                 <code id="code">
-                class *serviceClassName* extends SysOperationServiceBase 
-                { 
-                    public void process(contractClassName _contract)
-                    { 
-                        //Do something
-                    } 
-                }
+    class *serviceClassName* extends SysOperationServiceBase 
+    { 
+        public void process(contractClassName _contract)
+        { 
+            //Do something
+        } 
+    }
                 </code></pre>
         </div>
     </div>
@@ -74,37 +74,37 @@
             </div>
             <pre class="codeblock">
                 <code id="code">
-                class *controllerClassName*  extends SysOperationServiceController
-                { 
-                    protected void new() 
-                    { 
-                            super(classStr(serviceClassName), methodStr(serviceClassName, process), SysOperationExecutionMode::Synchronous); 
-                    }
-                            
-                    public ClassDescription defaultCaption() 
-                    { 
-                        return "Process Job"; // Replace with label of job name
-                    }
-                            
-                    public static controllerClassName construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Synchronous) 
-                    { 
-                        controllerClassName controller; 
-                                
-                        controller = new controllerClassName(); 
-                        controller.parmExecutionMode(_executionMode); 
-                                
-                        return controller; 
-                    }
-                            
-                    public static void main(Args _args) 
-                    { 
-                        controllerClassName controller; 
-                                
-                        controller = controllerClassName::construct(); 
-                        controller.parmArgs(_args); 
-                        controller.startOperation(); 
-                    }
-                }
+    class *controllerClassName*  extends SysOperationServiceController
+    { 
+        protected void new() 
+        { 
+                super(classStr(serviceClassName), methodStr(serviceClassName, process), SysOperationExecutionMode::Synchronous); 
+        }
+                
+        public ClassDescription defaultCaption() 
+        { 
+            return "Process Job"; // Replace with label of job name
+        }
+                
+        public static controllerClassName construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Synchronous) 
+        { 
+            controllerClassName controller; 
+                    
+            controller = new controllerClassName(); 
+            controller.parmExecutionMode(_executionMode); 
+                    
+            return controller; 
+        }
+                
+        public static void main(Args _args) 
+        { 
+            controllerClassName controller; 
+                    
+            controller = controllerClassName::construct(); 
+            controller.parmArgs(_args); 
+            controller.startOperation(); 
+        }
+    }
                 </code></pre>
         </div>
     </div>

@@ -8,16 +8,44 @@ h2{
 main{
     margin: auto;
     width: 70%;
-}*/
-
+}
+*/
+  
 .card {
     background-color: black;
     color: #8ed1fc;
 }
 
+.card-header:hover {
+    cursor: pointer;
+}
+
+.card-header  h2:before {
+    content: url('../Assets/expand_less_FILL0_wght400_GRAD0_opsz48.svg');
+    float: right;
+    transition: all 0.5s;
+    height: 48px;
+}
+
+.card-header[aria-expanded="false"] h2:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.list-group-item {
+    background-color: black;
+    color: #8ed1fc;
+    border: none;
+}
+
+.table th {
+    width: fit-content;
+}
+
 .CodeContainer {
     margin: auto;
-    width: 700px;
+    width: 800px;
     background-color: #8ed1fc;
 }
 
@@ -55,13 +83,19 @@ main{
 
 .CodeContainer button:active {
     background-color: #3e8e41;
+    transition: opacity .5s ease-in-out;
+}
+/*
+color: #3e8e41;
+opacity: 0;
     transition: all 0s;
-    /*box-shadow: 0 5px #666;
-    transform: translateY(4px);*/
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  .CodeContainer button:after {
+      content: "";
+    
   }
-  /*
-.CodeContainer button:after {
-    content: "";
+/*
     background: #90EE90;
     display: block;
     position: absolute;
@@ -73,12 +107,16 @@ main{
     transition: all 0.8s
   }
   
- .CodeContainer button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s;
-  }*/
+  .CodeContainer button:active:after {
+      content: url('../Assets/done_FILL0_wght400_GRAD0_opsz48.svg');
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s;
+    }
+    */
 
 .CodeContainer .material-symbols-outlined{
     vertical-align: middle;

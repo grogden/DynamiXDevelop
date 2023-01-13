@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Lookup method</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     
@@ -18,45 +20,40 @@
     <h1>Lookup method</h1>
 </div>
 
-<div class="container bg-black">
-    <div id="FormDataSourceField" class="bg-black card">
-        <div class="card-header" data-bs-toggle="collapse" href="#collapseOne">
-            <a class="text-primary btn container-fluid">Form Data Source Field</a>
-        </div>
+<div class="container">
+    <div class="card">
+        <div class="card-header" data-bs-toggle="collapse" href="#collapseOne"><h2>Form Data Source Field</h2></div>
         <div id="collapseOne" class="collapse show bg-black" data-bs-parent="#accordion">
             <div class="card-body">
                 <p>Form data source field additional information</p>
                 <div class="CodeContainer">
                     <div class="CopyCode">
-                        <span class="language">X++</span>
-                        <button type="button" id="copyCodeBtn" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
+                        <span class="language">X++</span><button type="button" id="copyCodeBtn" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
                     </div>
                     <pre class="codeblock">
                         <code id="code1">
-                        public void lookup(FormControl _formControl, str _filterStr)
-                        {
-                            Query query = new Query(); 
-                            QueryBuildDataSource queryBuildDataSource; 
-                            SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
-                            
-                            sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
-                            sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
-                            
-                            queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
-                            queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
-                            
-                            sysTableLookup.parmQuery(query); 
-                            sysTableLookup.performFormLookup();
-                        }
+    public void lookup(FormControl _formControl, str _filterStr)
+    {
+        Query query = new Query(); 
+        QueryBuildDataSource queryBuildDataSource; 
+        SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
+        
+        sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
+        sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
+        
+        queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
+        queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
+        
+        sysTableLookup.parmQuery(query); 
+        sysTableLookup.performFormLookup();
+    }
                         </code></pre>
                 </div>
             </div>
         </div>
     </div>
-    <div id="FormStringControl" class="card">
-        <div class="card-header" data-bs-toggle="collapse" href="#collapseTwo">
-            <a class="text-primary btn container-fluid" >Form String Control</a>
-        </div>
+    <div class="card">
+        <div class="card-header" data-bs-toggle="collapse" href="#collapseTwo"><h2>Form String Control</h2></div>
         <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion">
             <div class="card-body">
                 <p>Form String Control additional information</p>
@@ -67,30 +64,28 @@
                     </div>
                     <pre class="codeblock">
                         <code id="code2">
-                        public void lookup()
-                        {
-                            Query query = new Query(); 
-                            QueryBuildDataSource queryBuildDataSource; 
-                            SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), this); 
-                            
-                            sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
-                            sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
-                            
-                            queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
-                            queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
-                            
-                            sysTableLookup.parmQuery(query); 
-                            sysTableLookup.performFormLookup();
-                        }
+    public void lookup()
+    {
+        Query query = new Query(); 
+        QueryBuildDataSource queryBuildDataSource; 
+        SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), this); 
+        
+        sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
+        sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
+        
+        queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
+        queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
+        
+        sysTableLookup.parmQuery(query); 
+        sysTableLookup.performFormLookup();
+    }
                         </code></pre>
                 </div>
             </div>
         </div>
     </div>
-    <div id="FormRefGroupControl" class="card">
-        <div class="card-header" data-bs-toggle="collapse" href="#collapseThree">
-            <a class="btn container-fluid" >Form Reference Group Control</a>
-        </div>
+    <div class="card">
+        <div class="card-header" data-bs-toggle="collapse" href="#collapseThree"><h2>Form Reference Group Control</h2></div>
         <div id="collapseThree" class="collapse show" data-bs-parent="#accordion">
             <div class="card-body">
                 <p>Form Reference Group Control additional information</p>
@@ -101,21 +96,21 @@
                     </div>
                     <pre class="codeblock">
                         <code id="code3">
-                        public void lookup(FormControl _formControl, str _filterStr)
-                        {
-                            Query query = new Query(); 
-                            QueryBuildDataSource queryBuildDataSource; 
-                            SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
-                            
-                            sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
-                            sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
-                            
-                            queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
-                            queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
-                            
-                            sysTableLookup.parmQuery(query); 
-                            sysTableLookup.performFormLookup();
-                        }
+    public void lookup(FormControl _formControl, str _filterStr)
+    {
+        Query query = new Query(); 
+        QueryBuildDataSource queryBuildDataSource; 
+        SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
+        
+        sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
+        sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
+        
+        queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
+        queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
+        
+        sysTableLookup.parmQuery(query); 
+        sysTableLookup.performFormLookup();
+    }
                         </code></pre>
                 </div>
             </div>
