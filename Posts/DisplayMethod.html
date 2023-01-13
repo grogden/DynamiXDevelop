@@ -14,58 +14,37 @@
 </head>
 
 <body>
-<div class="p-5 text-center">
-    <h1>Display method</h1>
-</div>
+<h1 class="p-5 text-center">Display method</h1>
 
 <div class="container">
-    <div id="FormDataSourceDisplayMethod" class="card">
-        <div class="card-header" data-bs-toggle="collapse" href="#collapseOne">
-            <a class="text-primary btn container-fluid">Form Data Source display method</a>
-        </div>
-        <div id="collapseOne" class="collapse show bg-black" data-bs-parent="#accordion">
-            <div class="card-body">
-                <p>Form data source display method additional information</p>
-                <div class="CodeContainer">
-                    <div class="CopyCode">
-                        <span class="language">X++</span>
-                        <button type="button" id="copyCodeBtn" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
-                    </div>
-                    <pre class="codeblock">
-                        <code id="code1">
+<div class="card"><div class="card-header" data-bs-toggle="collapse" href="#collapseOne"><h2>Form Data Source display method</h2></div>
+    <div id="collapseOne" class="collapse show bg-black" data-bs-parent="#accordion"><div class="card-body">
+    <p>Form data source display method additional information</p>
+    <div class="CodeContainer">
+    <div class="CopyCode"><span class="language">X++</span><button type="button" id="copyCodeBtn" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button></div>
+    <pre class="codeblock"><code id="code1">
     display NumberOfRecords testMethod(CustTable myTable)
     {
         NumberOfRecords recCount = this.totalNumberOfRows();
         Return recCount;
     }
-                        </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="TableDisplayMethod" class="card">
-        <div class="card-header" data-bs-toggle="collapse" href="#collapseTwo">
-            <a class="text-primary btn container-fluid" >Table display method</a>
-        </div>
-        <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion">
-            <div class="card-body">
-                <p>Table display method additional information</p>
-                <div class="CodeContainer">
-                    <div class="CopyCode">
-                        <span class="language">X++</span>
-                        <button type="button" onclick="copyCode('#code2')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
-                    </div>
-                    <pre class="codeblock">
-                        <code id="code2">
+    </code></pre></div>
+    </div></div>
+</div>
+
+<div class="card"><div class="card-header" data-bs-toggle="collapse" href="#collapseTwo"><h2>Table display method</h2></div>
+    <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion"><div class="card-body">
+    <p>Table display method additional information</p>
+    <div class="CodeContainer">
+    <div class="CopyCode"><span class="language">X++</span><button type="button" onclick="copyCode('#code2')"><span class="material-symbols-outlined">content_copy</span> Copy</button></div>
+    <pre class="codeblock"><code id="code2">
     display LogisticsAddressing deliveryAddressing()
     {
         return this.deliveryAddress().Address;
     }
-                        </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
+    </code></pre></div>
+    </div></div>
+</div>
 </div>
 </body>
 </html>

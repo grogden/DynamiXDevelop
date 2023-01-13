@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Display Method</title>
+    <title>Post Template</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     
@@ -14,35 +14,34 @@
 </head>
 
 <body>
-<h1>Header 1</h1>
+<h1 class="p-5 text-center">Header 1 template</h1>
 
-<div>
-    <h2>Form Data Source Field</h2>
+<div class="container">
+<div class="card"><div class="card-header" data-bs-toggle="collapse" href="#collapseOne"><h2>Form Data Source display method</h2></div>
+    <!--Body of Fast Tab-->
+    <div id="collapseOne" class="collapse show bg-black" data-bs-parent="#accordion"><div class="card-body">
+    <p>Form data source display method additional information</p>
+    <!--Code container-->
     <div class="CodeContainer">
-        <div class="CopyCode">
-            <span class="language">X++</span>
-            <button type="button" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button>
-        </div>
-        <pre class="codeblock">
-            <code id="code1">
+    <div class="CopyCode"><span class="language">X++</span><button type="button" onclick="copyCode('#code1')"><span class="material-symbols-outlined">content_copy</span> Copy</button></div>
+    <pre class="codeblock"><code id="code1">
     public void lookup(FormControl _formControl, str _filterStr)
     {
         Query query = new Query(); 
         QueryBuildDataSource queryBuildDataSource; 
         SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(custTable), _formControl); 
-        
+
         sysTableLookup.addLookupField(fieldNum(CustTable, AccountNum)); 
         sysTableLookup.addLookupField(fieldNum(CustTable, CustGroup)); 
-        
+
         queryBuildDataSource = query.addDataSource(tableNum(CustTable)); 
         queryBuildDataSource.addRange(fieldNum(CustTable, CustGroup)).value('40'); 
-        
+
         sysTableLookup.parmQuery(query); 
         sysTableLookup.performFormLookup();
     }
-            </code></pre>
+    </code></pre></div></div></div>
     </div>
 </div>
-
 </body>
 </html>
