@@ -8,7 +8,14 @@
     <link rel="stylesheet" type="text/css" href="Templates/theme.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/Pages/Pages.js"></script>
+
+    <script>
+        $(function() {
+            $.get("Templates/header.html", function(data) {
+                $('body').prepend(data);
+            });
+        })
+    </script>
 </head>
 
 <body>
