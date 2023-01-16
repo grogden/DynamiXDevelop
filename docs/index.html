@@ -8,16 +8,28 @@
     <link rel="stylesheet" type="text/css" href="../Templates/theme.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-    $(function() {
-      $.get("../Templates/header.html", function(data) {
-          $('body').prepend(data);
-      });
-    });
-    </script>
 </head>
 
 <body>
+  <div class="header">
+    <div class="logo_container">
+        <h1><a href="https://grogden.github.io/DynamiXDevelop/">DynamiX Develop</a>  |</h1>
+    </div>
+
+    <ul class="navigation">
+        <li><a href="https://grogden.github.io/DynamiXDevelop/Pages/D365.html">D365</a></li>
+        <li><a href="https://grogden.github.io/DynamiXDevelop/Pages/Tools.html">Tools</a></li>
+        <li><a href="https://grogden.github.io/DynamiXDevelop/Pages/Certifications.html">Certifications</a></li>
+        <li><a href="https://grogden.github.io/DynamiXDevelop/Pages/Contact.html">Contact</a></li>
+        <li><a href="https://grogden.github.io/DynamiXDevelop/Pages/About.html">About</a></li>
+    </ul>
+    <div class="search-container">
+        <form class="search-form" action="https://grogden.github.io/DynamiXDevelop/Pages/SearchResults.html" method="get">
+            <input type="text" placeholder="Search for X++ code" name="search" id="search" onload="populateresults()">
+            <button type="submit"><span class="material-symbols-outlined">search</span></button>
+        </form>
+    </div>
+</div>
   <h1>DynamiX Develop</h1>
   <h2>Library for quick X++ references and code snippets</h2>
 </body>
