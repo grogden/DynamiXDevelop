@@ -8,7 +8,30 @@ $(function() {
             $.each(data, function(key, value){
                 if (value.category.search('code') != -1)
                 {
-                    $('#d365posts').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                    switch (value.subcategory) {
+                        case 'forms':
+                            $('#Forms').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'tables':
+                            $('#Tables').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'reports':
+                            $('#Reports').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'data entities':
+                            $('#Date Entities').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'financial dimensions':
+                            $('#Financial Dimensions').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'workflow':
+                            $('#Workflow').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                        case 'other':
+                            $('#Other').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
+                            break;
+                }
+                    //$('#d365posts').append('<li class="list-group-item link-class"><a href="../'+value.file_path+'">'+value.title+'</a></li>');
                 }
             });   
         });

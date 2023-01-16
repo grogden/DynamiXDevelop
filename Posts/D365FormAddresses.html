@@ -69,9 +69,36 @@
                         </table>
                     </li>
                     <li class="list-group-item">Add Action Pane control to group. Add Button Group control inside Action Pane. Then Add these 4 buttons inside to the button group
-                        <table class="table table-dark table-hover">
-                            <tr><td>Date Source</td><td>LogisticsPostalAddress</td></tr>
-                        </table>
+                        <ul class="list-group">
+                            <li class="list-group-item">NewAddress
+                                <table class="table table-dark table-hover">
+                                    <tr><td>Auto Declaration</td><td>Yes</td></tr>
+                                    <tr><td>Menu Item Type</td><td>Display</td></tr>
+                                    <tr><td>Menu Item Name</td><td>LogisticsPostalAddressNew</td></tr>
+                                </table>
+                            </li>
+                            <li class="list-group-item">EditAddress
+                                <table class="table table-dark table-hover">
+                                    <tr><td>Auto Declaration</td><td>Yes</td></tr>
+                                    <tr><td>Menu Item Type</td><td>Display</td></tr>
+                                    <tr><td>Menu Item Name</td><td>LogisticsPostalAddressEdit</td></tr>
+                                </table>
+                            </li>
+                            <li class="list-group-item">ClearAddress
+                                <table class="table table-dark table-hover">
+                                    <tr><td>Auto Declaration</td><td>Yes</td></tr>
+                                    <tr><td>Menu Item Type</td><td>Display</td></tr>
+                                    <tr><td>Menu Item Name</td><td>LogisticsPostalAddressClear</td></tr>
+                                </table>
+                            </li>
+                            <li class="list-group-item">MapButton
+                                <table class="table table-dark table-hover">
+                                    <tr><td>Auto Declaration</td><td>Yes</td></tr>
+                                    <tr><td>Menu Item Type</td><td>Display</td></tr>
+                                    <tr><td>Menu Item Name</td><td>LogisticsPostalAddressMap</td></tr>
+                                </table>
+                            </li>
+                        </ul>
                     </li>
                     <li class="list-group-item">Add String control to Group
                         <table class="table table-dark table-hover">
@@ -95,7 +122,7 @@
                     </div>
                     <pre class="codeblock">
                         <code id="code1">
-LogisticsPostalAddressFormHandler   addressController;
+    LogisticsPostalAddressFormHandler   addressController;
                         </code></pre>
                 </div>
             </li>
@@ -107,10 +134,10 @@ LogisticsPostalAddressFormHandler   addressController;
                     </div>
                     <pre class="codeblock">
                         <code id="code2">
-internal LogisticsPostalAddressFormHandler  getAddressController()
-{
-return addressController;
-}
+    internal LogisticsPostalAddressFormHandler  getAddressController()
+    {
+        return addressController;
+    }
                         </code></pre>
                 </div>
             </li>
@@ -122,8 +149,8 @@ return addressController;
                     </div>
                     <pre class="codeblock">
                         <code id="code3">
-addressController = LogisticsPostalAddressFormHandler::newParameters(examplTable_ds, logisticsPostalAddress_ds);
-addressController.callerUpdateQuery(fieldNum(exampleTable, LogisticsLocation));
+    addressController = LogisticsPostalAddressFormHandler::newParameters(examplTable_ds, logisticsPostalAddress_ds);
+    addressController.callerUpdateQuery(fieldNum(exampleTable, LogisticsLocation));
                         </code></pre>
                 </div>
             </li>
@@ -135,11 +162,11 @@ addressController.callerUpdateQuery(fieldNum(exampleTable, LogisticsLocation));
                     </div>
                     <pre class="codeblock">
                         <code id="code4">
-if (ret)
-{
-addressController.callerActive();
-addressController.callerUpdateButtons(newAddress, editAddress, clearAddress, mapButton);
-}
+    if (ret)
+    {
+        addressController.callerActive();
+        addressController.callerUpdateButtons(newAddress, editAddress, clearAddress, mapButton);
+    }
                         </code></pre>
                 </div>
             </li>
@@ -151,14 +178,14 @@ addressController.callerUpdateButtons(newAddress, editAddress, clearAddress, map
                     </div>
                     <pre class="codeblock">
                         <code id="code1">
-public void write()
-{
-}
+    public void write()
+    {
+    }
 
-public boolean validateWrite()
-{
-return true;
-}
+    public boolean validateWrite()
+    {
+        return true;
+    }
                         </code></pre>
                 </div>
             </li>
